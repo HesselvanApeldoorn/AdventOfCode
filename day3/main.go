@@ -5,7 +5,6 @@ import (
 	"math"
 )
 func main() {
-	fmt.Printf("hello, world\n")
 	fmt.Print("gib input: ")
 	var input int
 	fmt.Scan(&input)
