@@ -6,12 +6,12 @@ import java.nio.file.Paths;
 
 public abstract class AbstractPuzzle {
 
-	public int[] inputLines;
+	public String[] inputLines;
 
 	protected void solve() {
 		getInput("input1.txt");
 		System.out.println("answer to first Puzzle is: " + solveFirst());
-		getInput("input2.txt");
+		getInput("input1.txt");
 		System.out.println("answer to second Puzzle is: " + solveSecond());
 	}
 
@@ -21,7 +21,7 @@ public abstract class AbstractPuzzle {
 		try {
 			Path path = Paths.get(this.getClass().getClassLoader()
 					.getResource(inputPath).toURI());
-			inputLines = Files.lines(path).map(s -> Integer.parseInt(s)).mapToInt(i -> i).toArray();
+			inputLines = Files.lines(path).toArray(String[]::new);
 		} catch (Exception e) {
 			System.out.println("error: " + e);
 		}

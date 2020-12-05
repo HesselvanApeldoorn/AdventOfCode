@@ -3,15 +3,18 @@ package nl.apeldoorn.aoc.day1;
 import lombok.NoArgsConstructor;
 import nl.apeldoorn.aoc.AbstractPuzzle;
 
+import java.util.Arrays;
+
 @NoArgsConstructor
 public class Puzzle1 extends AbstractPuzzle {
 
 	@Override
 	public int solveFirst() {
-		for (int i = 0; i < inputLines.length; i++) {
-			for (int j = i + 1; j < inputLines.length; j++) {
-				if (inputLines[i] + inputLines[j] == 2020) {
-					return inputLines[i] * inputLines[j];
+		int[] inputInts = Arrays.stream(inputLines).mapToInt(i -> Integer.parseInt(i)).toArray();
+		for (int i = 0; i < inputInts.length; i++) {
+			for (int j = i + 1; j < inputInts.length; j++) {
+				if (inputInts[i] + inputInts[j] == 2020) {
+					return inputInts[i] * inputInts[j];
 				}
 			}
 		}
@@ -20,11 +23,12 @@ public class Puzzle1 extends AbstractPuzzle {
 
 	@Override
 	protected int solveSecond() {
-		for (int i = 0; i < inputLines.length; i++) {
-			for (int j = i + 1; j < inputLines.length; j++) {
-				for (int k = j + 1; k < inputLines.length; k++) {
-					if (inputLines[i] + inputLines[j] + inputLines[k] == 2020) {
-						return inputLines[i] * inputLines[j] * inputLines[k];
+		int[] inputInts = Arrays.stream(inputLines).mapToInt(i -> Integer.parseInt(i)).toArray();
+		for (int i = 0; i < inputInts.length; i++) {
+			for (int j = i + 1; j < inputInts.length; j++) {
+				for (int k = j + 1; k < inputInts.length; k++) {
+					if (inputInts[i] + inputInts[j] + inputInts[k] == 2020) {
+						return inputInts[i] * inputInts[j] * inputInts[k];
 					}
 				}
 			}
