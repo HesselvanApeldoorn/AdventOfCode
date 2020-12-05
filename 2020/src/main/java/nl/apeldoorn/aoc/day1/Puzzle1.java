@@ -1,19 +1,38 @@
 package nl.apeldoorn.aoc.day1;
 
-import lombok.extern.slf4j.Slf4j;
+import lombok.NoArgsConstructor;
+import nl.apeldoorn.aoc.AbstractPuzzle;
 
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
+@NoArgsConstructor
+public class Puzzle1 extends AbstractPuzzle {
 
-@Slf4j
-public class Main {
+	@Override
+	public int solveFirst() {
+		for (int i = 0; i < inputLines.length; i++) {
+			for (int j = i + 1; j < inputLines.length; j++) {
+				if (inputLines[i] + inputLines[j] == 2020) {
+					return inputLines[i] * inputLines[j];
+				}
+			}
+		}
+		return -1;
+	}
 
-	public static void main(String args[]) throws Exception {
-		Path path = Paths.get(Main.class.getClassLoader()
-				.getResource("day1/input.txt").toURI());
-		String[] lines = Files.lines(path).toArray(String[]::new);;
-		System.out.println(lines[0]);
-		log.info("start");
+	@Override
+	protected int solveSecond() {
+		for (int i = 0; i < inputLines.length; i++) {
+			for (int j = i + 1; j < inputLines.length; j++) {
+				for (int k = j + 1; k < inputLines.length; k++) {
+					if (inputLines[i] + inputLines[j] + inputLines[k] == 2020) {
+						return inputLines[i] * inputLines[j] * inputLines[k];
+					}
+				}
+			}
+		}
+		return -1;
+	}
+
+	public static void main(String args[]) {
+		new Puzzle1().solve();
 	}
 }
