@@ -8,7 +8,7 @@ import org.apache.commons.lang3.StringUtils;
 public class Puzzle2 extends AbstractPuzzle {
 
 	@Override
-	public int solveFirst() {
+	public long solveFirst() {
 		int valid = 0;
 		for(String inputline : inputLines) {
 			String appearances = inputline.split(" ")[0];
@@ -25,7 +25,7 @@ public class Puzzle2 extends AbstractPuzzle {
 	}
 
 	@Override
-	protected int solveSecond() {
+	protected long solveSecond() {
 		int valid = 0;
 		for(String inputline : inputLines) {
 			String appearances = inputline.split(" ")[0];

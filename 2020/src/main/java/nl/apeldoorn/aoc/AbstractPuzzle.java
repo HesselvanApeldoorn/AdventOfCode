@@ -27,9 +27,9 @@ public abstract class AbstractPuzzle {
 		}
 	}
 
-	protected abstract int solveFirst();
+	protected abstract long solveFirst();
 
-	protected abstract int solveSecond();
+	protected abstract long solveSecond();
 
 
 }

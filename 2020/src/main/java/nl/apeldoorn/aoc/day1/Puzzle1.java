@@ -9,7 +9,7 @@ import java.util.Arrays;
 public class Puzzle1 extends AbstractPuzzle {
 
 	@Override
-	public int solveFirst() {
+	public long solveFirst() {
 		int[] inputInts = Arrays.stream(inputLines).mapToInt(i -> Integer.parseInt(i)).toArray();
 		for (int i = 0; i < inputInts.length; i++) {
 			for (int j = i + 1; j < inputInts.length; j++) {
@@ -22,7 +22,7 @@ public class Puzzle1 extends AbstractPuzzle {
 	}
 
 	@Override
-	protected int solveSecond() {
+	protected long solveSecond() {
 		int[] inputInts = Arrays.stream(inputLines).mapToInt(i -> Integer.parseInt(i)).toArray();
 		for (int i = 0; i < inputInts.length; i++) {
 			for (int j = i + 1; j < inputInts.length; j++) {
