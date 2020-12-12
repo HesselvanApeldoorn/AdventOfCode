@@ -1,6 +1,5 @@
 package nl.apeldoorn.aoc.day5;
 
-import lombok.NoArgsConstructor;
 import nl.apeldoorn.aoc.AbstractPuzzle;
 
 import java.util.ArrayList;
@@ -9,7 +8,6 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-@NoArgsConstructor
 public class Puzzle5 extends AbstractPuzzle {
 
 	@Override

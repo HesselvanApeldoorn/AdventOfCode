@@ -1,11 +1,9 @@
 package nl.apeldoorn.aoc.day1;
 
-import lombok.NoArgsConstructor;
 import nl.apeldoorn.aoc.AbstractPuzzle;
 
 import java.util.Arrays;
 
-@NoArgsConstructor
 public class Puzzle1 extends AbstractPuzzle {
 
 	@Override

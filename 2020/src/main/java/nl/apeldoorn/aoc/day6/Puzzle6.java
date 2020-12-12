@@ -1,6 +1,5 @@
 package nl.apeldoorn.aoc.day6;
 
-import lombok.NoArgsConstructor;
 import nl.apeldoorn.aoc.AbstractPuzzle;
 
 import java.util.ArrayList;
@@ -9,7 +8,6 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-@NoArgsConstructor
 public class Puzzle6 extends AbstractPuzzle {
 
 	@Override

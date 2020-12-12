@@ -1,9 +1,7 @@
 package nl.apeldoorn.aoc.day3;
 
-import lombok.NoArgsConstructor;
 import nl.apeldoorn.aoc.AbstractPuzzle;
 
-@NoArgsConstructor
 public class Puzzle3 extends AbstractPuzzle {
 
 	@Override

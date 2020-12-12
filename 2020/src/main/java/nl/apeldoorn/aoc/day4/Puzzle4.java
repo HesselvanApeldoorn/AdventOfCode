@@ -1,13 +1,11 @@
 package nl.apeldoorn.aoc.day4;
 
-import lombok.NoArgsConstructor;
 import nl.apeldoorn.aoc.AbstractPuzzle;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.regex.Pattern;
 
-@NoArgsConstructor
 public class Puzzle4 extends AbstractPuzzle {
 
 	@Override
