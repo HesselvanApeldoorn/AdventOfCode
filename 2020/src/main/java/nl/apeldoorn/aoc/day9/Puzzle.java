@@ -10,10 +10,15 @@ public class Puzzle extends AbstractPuzzle {
 
 	@Override
 	public long solveFirst() {
+		Long[] longLines =  Stream.of(inputLines).map(Long::valueOf).toArray(Long[]::new);
+		long invalidNumber = findInvalidNumber(longLines);
+		return invalidNumber;
+	}
+
+	private long findInvalidNumber(Long[] longLines) {
 		int preambleSize = 25;
 		boolean valid;
 		int index;
-		Long[] longLines =  Stream.of(inputLines).map(Long::valueOf).toArray(Long[]::new);
 		for(index=preambleSize; index<longLines.length; index++) {
 			valid = false;
 			outerloop:
@@ -34,26 +39,8 @@ public class Puzzle extends AbstractPuzzle {
 
 	@Override
 	protected long solveSecond() {
-		int preambleSize = 25;
-		boolean valid;
-		int index;
 		Long[] longLines =  Stream.of(inputLines).map(Long::valueOf).toArray(Long[]::new);
-		for(index=preambleSize; index<longLines.length; index++) {
-			valid = false;
-			outerloop:
-			for(int j=index-preambleSize; j<index; j++) {
-				for(int k=j+1; k<index; k++) {
-					if (longLines[j] + longLines[k] == longLines[index]) {
-						valid = true;
-						break outerloop;
-					}
-				}
-			}
-			if (!valid) {
-				break;
-			}
-		}
-		long invalidNumber = longLines[index];
+		long invalidNumber = findInvalidNumber(longLines);
 		int sum = 0;
 		for(int i=0; i<longLines.length; i++) {
 			int j = i;
