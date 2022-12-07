@@ -4,7 +4,7 @@ import nl.apeldoorn.aoc.AbstractPuzzle;
 
 import java.util.PriorityQueue;
 
-public class Puzzle1 extends AbstractPuzzle {
+public class Puzzle extends AbstractPuzzle {
 
 	@Override
 	public long solveFirst() {
@@ -45,6 +45,6 @@ public class Puzzle1 extends AbstractPuzzle {
 	}
 
 	public static void main(String args[]) {
-		new Puzzle1().solve();
+		new Puzzle().solve();
 	}
 }
